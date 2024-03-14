@@ -19,7 +19,7 @@ public class downloadAction extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String fileName = request.getParameter("file");
 		
-		String directory = this.getServletContext().getRealPath("/upload/");
+		String directory = "C:/jsp/upload";
 		File file = new File(directory + "/" + fileName);
 		
 		String mimeType = getServletContext().getMimeType(file.toString());

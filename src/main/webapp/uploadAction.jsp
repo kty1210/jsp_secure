@@ -14,7 +14,7 @@
 </head>
 <body>
 <%
-	String directory = application.getRealPath("/upload/");
+	String directory = "C:/jsp/upload";
 	int maxSize = 1024 * 1024 * 100; // 100M 까지만 가능
 	String encoding = "UTF-8";
 	
@@ -29,7 +29,7 @@
 	
 	if(!fileName.endsWith(".gif") && !fileName.endsWith(".png") &&
 			!fileName.endsWith(".jpg") && !fileName.endsWith(".txt")){
-		File file = new File(directory + fileRealName);
+		File file = new File(directory + "/" + fileRealName);
 		file.delete();
 		out.write("업로드 할 수 없는 확장자입니다");
 	} else{
